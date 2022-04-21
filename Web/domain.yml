@@ -1,0 +1,92 @@
+version: "2.0"
+
+intents:  # khai báo
+  - greet # chào hỏi
+  - give_name # người dùng đưa tên
+  - goodbye  # tạm biệt
+  - thank # cảm ơn
+  - name_laptop #
+  - brand_laptop # thương hiệu
+  - give_price_laptop # dua ra gia
+  - name_phone
+  - brand_phone
+  - give_mucdich
+  - give_price_phone
+
+entities:
+  - cust_sex
+  - cust_name
+  - brand  
+  - mucdich
+slots:
+  cust_sex:
+    auto_fill: true
+    type: text
+  cust_name:
+    auto_fill: true
+    type: text
+  brand:
+    auto_fill: true
+    type: text
+  mucdich:
+    auto_fill: true
+    type: text
+forms:
+- form_info
+
+#bot sẽ trả lời
+responses:
+  utter_greet:
+  - text: "Kính chào Qúy khách! Qúy khách vui lòng cho biết tên để tiện xung hô được không ah?"
+    image: "https://i.pinimg.com/originals/7e/b3/03/7eb303bc701f88e195164527d3e553b2.gif"
+  
+  utter_greet_with_name:
+  - text: "Kính chào {cust_sex} {cust_name}. Trợ lý Shop có thể giúp gì được {cust_sex} {cust_name} ạ?"
+  
+  utter_goodbye:
+  - text: "Kính chào tạm biệt và chúc quý khách một ngày tốt lành!"
+    image: "https://img2.thuthuatphanmem.vn/uploads/2018/12/31/hinh-anh-dong-dep-nhat_112054113.gif"
+  utter_ask_brand_phone:
+  - text: "{cust_sex} muốn mua Điện thoại Thương hiệu gì ?\nThương hiệu đến từ :   Xiaomi, Iphone, Samsung, Oppo.....?"
+  utter_ask_mucdich:
+  - text: "Mục đích  của {cust_sex} {cust_name} là ?"
+  utter_ask_price_phone:
+  - text: "Khoảng giá của {cust_sex} {cust_name} có thể  vừa túi tiền ^^ ?"
+  utter_thank:
+  - text: "Cảm ơn quý khách ạ!"
+    image: "http://upanh123.com/wp-content/uploads/2020/12/hinh-anh-cam-on-sinh-nhat6.gif"
+
+  utter_ask_brand_laptop:
+  - text: "{cust_sex} muốn mua Laptop Thương hiệu gì ?\nThương hiệu đến từ :   Dell,Macbook,Asus,MSI.....?"
+
+  utter_ask_price_laptop:
+  - text: "Khoảng giá của {cust_sex} {cust_name} có thể vừa túi tiền ?"
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - utter_greet
+  - utter_greet_with_name
+  - utter_ask_brand_laptop
+  - action_save_brand
+  - utter_ask_price_laptop
+  - action_goiy
+  - action_kq
+  - utter_goodbye
+  - utter_thank
+  - utter_ask_brand_phone
+  - utter_ask_mucdich
+  - action_select_mucdich
+  - utter_ask_price_phone
+  - action_goiy2
+  - action_kq_phone
+  - action_save_mucdich
+
+
+  
+

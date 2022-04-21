@@ -1,0 +1,10 @@
+version: "2.0"
+
+rules:
+
+- rule: Trên 10 triệu
+  steps:
+  - intent: give_price_laptop
+  - action: action_kq
+
+

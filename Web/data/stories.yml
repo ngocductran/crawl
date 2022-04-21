@@ -1,0 +1,75 @@
+version: "2.0"
+
+stories:
+
+- story: ChaoHoiDuaTenMuaLaptop
+  steps:
+  - intent: greet # người dùng chào
+  - action: utter_greet # bot trả lời  and hỏi tên
+  - intent: give_name
+  - action: utter_greet_with_name
+- story: cc2
+  steps: 
+  - intent: name_laptop # người dùng hỏi sản phẩm latop
+  - action: utter_ask_brand_laptop # bot hỏi thương hiệu laptop
+- story: cc5
+  steps: 
+  - intent: brand_laptop # người dung đưa ra thương hiệu
+  - action: action_save_brand # luu brand 
+  - action: utter_ask_price_laptop # bot hoi gia sp
+  - action: action_goiy # bot dua ra cac buuton lựa chọn khoang gia
+  - intent: give_price_laptop
+  - action: action_kq # bot dua ra kq
+- story: cc7
+  steps:
+  - intent: brand_laptop
+  - action: utter_ask_price_laptop # bot hoi gia sp
+  - action: action_goiy # bot dua ra cac buuton lựa chọn khoang gia
+  - intent: give_price_laptop # nguoi dung co the dua ra gia
+  - action: action_kq # bot dua ra kq
+  - intent: thank
+  - action: utter_thank
+
+
+# Điện  thoại
+- story: cc8
+  steps:
+  - intent: name_phone    # Anh muốn mua điện thoại
+  - action: utter_ask_mucdich #  hoi muc dich
+  - action: action_select_mucdich # bot dua ra các muc dich
+  - intent: give_mucdich
+  - action: utter_ask_brand_phone # hỏi thương hiệu
+  - intent: brand_phone # người dùng đưa ra thương hiệu
+  - action: utter_ask_price_phone # bot hoi gia
+  - action: action_goiy2 # bot đưa ra khoảng gia
+  - intent: give_price_phone # người dùng chọn giá
+  - action: action_kq_phone
+- story: cc11
+  steps:
+  - intent: give_mucdich
+  - action: utter_ask_brand_phone # hỏi thương hiệu
+
+- story: cc9
+  steps:
+  - action: action_select_mucdich
+  - intent: give_mucdich # có kq action muc dich
+  - action: utter_ask_brand_phone # hỏi thương hiệu
+  - intent: brand_phone # người dùng đưa ra thương hiệu
+  - action: utter_ask_price_phone # bot hoi gia
+  - action: action_goiy2 # bot đưa ra khoảng gia
+  - intent: give_price_phone # người dùng chọn giá
+  - action: action_kq_phone
+  - intent: thank
+  - action: utter_thank
+
+
+- story: cc3
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+- story: cc4
+  steps:
+  - intent: thank
+  - action: utter_thank
+
+

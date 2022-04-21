@@ -1,0 +1,145 @@
+version: "2.0"
+
+
+# người dung chat
+nlu:
+    # ý định của người dùng
+   
+- intent: give_name
+  examples: |
+    - [Anh](cust_sex) là [Tuần](cust_name) 
+    - [Anh](cust_sex) tên là [Mỹ Hảo](cust_name)
+    - [Chị](cust_sex) là [Trang](cust_name)
+    - [Chị](cust_sex) tên là [Ngọc](cust_name)
+    - [Chị](cust_sex) tên là [Mỹ Ngọc](cust_name)
+    - [Cô](cust_sex) [Vân](cust_name)
+    - [Chú](cust_sex) [Hùng](cust_name)
+ 
+- intent: name_laptop
+  examples: |
+    - Tôi muốn mua laptop
+    - Anh muốn mua laptop 
+    - Mình muốn mua laptop 
+    - Mua Laptop
+    - Mua máy tính
+    - Mua laptop
+
+- intent:  brand_laptop
+  examples: |
+    - Tôi muốn mua laptop [Dell](brand)
+    - Anh muốn mua laptop [SamSung](brand)
+    - Mình mua laptop [Dell](brand)
+    - Mình muốn mua laptop [Dell](brand)
+    - Chị muốn mua laptop [Macbook](brand)
+    - Chị muốn mua laptop [ThinkPad](brand)
+    - [Thinkpad](brand)
+    - [Dell](brand)
+    - [Asus](brand)
+    - [Macbook](brand)
+    - [PHP](brand)
+    - [MSI](brand)
+    - Laptop [Dell](brand)
+    - Laptop [Asus](brand)
+    - Laptop [Macbook](brand)
+    - Laptop [Macbook M1](brand)
+    - Laptop [Macbook pro M1](brand)
+    - Laptop [MSI](brand)
+    - Laptop [PHP](brand)
+    - Mua laptop[Macbook](brand)
+    - Mua laptop[Dell](brand)
+    - Mua laptop[Asus](brand)
+    - Mua laptop[MSI](brand)
+    - Mua laptop[Thinkpad](brand)
+- intent: give_price_laptop
+  examples: |
+    - Trên 5 triệu
+    - Trên 10 triệu
+    - Trên 20 triệu
+    - Trên 30 triệu
+
+
+- intent: name_phone
+  examples: |
+    - Tôi muốn mua điện thoại
+    - Anh muốn mua điện thoại 
+    - Mình muốn mua điện thoại
+    - Mua điện thoại
+
+- intent:  brand_phone
+  examples: |
+    - Anh muốn mua điện thoại [Xiaomi](brand)
+    - Anh muốn mua điện thoại [Iphone](brand)
+    - Anh muốn mua điện thoại [iphone](brand)
+    - Tôi muốn mua điện thoại [Xiaomi](brand)
+    - Anh muốn mua điện thoại [SamSung](brand)
+    - Anh muốn mua điện thoại [Realme](brand)
+    - Anh muốn mua điện thoại [Vivo](brand)
+    - Mình mua điện thoại [Iphone](brand)
+    - Mình muốn mua điện thoại [iphone](brand)
+    - Chị muốn mua điện thoại [Oppo](brand)
+    - Chị muốn mua điện thoại [Iphone](brand)
+    - Chị muốn mua điện thoại [Vsmart](brand)
+    - [Xiaomi](brandphone)
+    - Xiaomi
+    - xiaomi
+    - iphone
+    - Iphone
+    - Oppo
+    - oppo
+    - SamSung
+    - Samsung
+    - Sam sung
+    - [Iphone](brand)
+    - [iphone](brand)
+    - [Samsung](brand)
+    - [Oppo](brand)
+    - [Realme](brand)
+    - [Vsmart](brand)
+    
+
+- intent: give_mucdich
+  examples: |
+    - [Chơi game](mucdich)
+    - [Quay phim chụp ảnh đẹp](mucdich)
+    - [Pin trâu](mucdich)
+    - [Bảo mật thông tin tốt](mucdich)
+    - Chơi game
+    - Chơi trò chơi
+    - Quay phim chụp ảnh
+    - Pin trâu
+    - Nghe nhạc
+
+- intent: give_price_phone
+  examples: |
+    - Trên 2 triệu
+    - Trên 4 triệu
+    - Trên 8 triệu
+    - Trên 13 triệu
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - Xin chào
+    - Chào
+    - Có ai ở đây không
+    - Có ai giúp mình không?
+    - Chị ơi
+    - Admin ơi
+- intent: goodbye
+  examples: |
+    - Tạm biệt nhé
+    - Tạm biệt em
+    - Chào tạm biệt
+    - Tạm biệt
+    - Hẹn gặp lại
+- intent: thank
+  examples: |
+    - Chuồn
+    - Siêu
+    - Tuyệt vời
+    - Cảm ơn
+    - Thank
+
+
+  
+
